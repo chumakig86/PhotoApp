@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "StringUtil", description = "String manipulating API")
+@Tag(name = "StringUtil controller", description = "String manipulating API")
 @RestController
 @RequestMapping("/stringUtil")
 public class StringUtilController {
