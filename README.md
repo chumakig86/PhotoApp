@@ -16,10 +16,17 @@ How to run:
     docker run -d -p 3306:3306 --name mysql-docker-container -e MYSQL_ROOT_PASSWORD=igor -e MYSQL_DATABASE=photo_app -e MYSQL_USER=test -e MYSQL_PASSWORD=test mysql/mysql-server:latest
    ```
 
-2.  Build and run application ./mvnw clean install Jacoco code coverage could be seen at target/site/jacoco/index.html
-   ```console 
+2.  Build application 
+```console
+./mvnw clean install 
+   ```
+
+Jacoco code coverage could be seen at target/site/jacoco/index.html
+
+3.  Run application   
+```console 
    ./mvnw spring-boot:run
    ```
 
-3.  Use swagger for testing
+4.  Use swagger for testing
     http://localhost:8080/swagger-ui/index.html#
