@@ -18,6 +18,8 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
 
     List<Order> findByOrderDateTimeBetween(LocalDateTime startDateTime, LocalDateTime endDateTime);
 
-    @Query(value = "SELECT o.order_date_time FROM orders o WHERE o.gift = true LIMIT 1", nativeQuery = true)
+    @Query(value = "SELECT o.order_date_time FROM orders o " +
+            "WHERE o.gift = true ORDER BY o.order_date_time DESC LIMIT 1",
+            nativeQuery = true)
     LocalDateTime findLastWinTime();
 }
