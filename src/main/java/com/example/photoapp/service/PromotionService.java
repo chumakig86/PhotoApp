@@ -31,7 +31,7 @@ public class PromotionService {
                 if (packageName.equals(order.getPackageType())) continue;
                 Order freeOrder = Order.builder()
                         .orderDateTime(LocalDateTime.now())
-                        .price(packagePriceMap.get(packageName))
+                        .price(0)
                         .packageType(packageName)
                         .gift(true)
                         .build();
